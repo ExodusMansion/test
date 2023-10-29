@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Nebula Nexus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset some default styles */
+        body, h1, h2, ul, li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        /* Basic styling for the whole page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(171, 171, 214);
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header styles */
+        header {
+            background-color: rgb(58, 0, 124);
+            color: white;
+            padding: 1px 0;
+        }
+h3 {
+    font-size: 12px; /* You can change the value to your desired font size */
+}
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        /* Main content styles */
+        main {
+            display: flex;
+            justify-content: space-between;
+            background-image: url('https://i.postimg.cc/3R7pkWRm/gal.png');
+            background-size: contain;
+            flex: 1;
+        }
+
+        /* Box styles */
+        .box {
+            flex-basis: calc(33.33% - 20px);
+            padding: 4px;
+            background-color: rgb(225, 218, 243);
+            color: black;
+            margin: 100px;
+            border-radius: 20px;
+            border: 4px solid rgb(58, 0, 124);
+            text-align: center;
+        }
+
+        /* Box header styles */
+        .box h2 {
+            background-color: rgb(58, 0, 124);
+            color: white;
+            padding: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        /* Password input styles */
+        .password-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #premium-password-input {
+            margin-top: 10px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #premium-submit-button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: rgb(58, 0, 124);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+       /* Modal styles */
+       .modal-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .modal {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #f1dfff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            z-index: 2; /* Ensure the modal is on top */
+        }
+
+        .modal h2 {
+            text-align: center;
+        }
+
+        .modal img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Modal overlay styles */
+        .modal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1; /* Ensure the overlay is below the modal */
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: rgb(58, 0, 124);
+            padding: 10px 0;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        #announcements .announcement-text {
+            text-align: left;
+        }
+
+        nav li {
+            margin-right: 20px;
+            font-size: 16px;
+        }
+
+        nav li a {
+            color: #FFD700;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav li a:hover {
+            color: white;
+        }
+        /* Increase the size of the close button */
+.close-button {
+    font-size: 40px; /* Adjust the font size to your desired size */
+    cursor: pointer; /* Add a cursor pointer to indicate it's clickable */
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="https://i.postimg.cc/P5z8ysSb/IMG-2597.png">
+                <h1 style="font-family: 'Cinzel', sans-serif;">Nebula Nexus</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="HOME PAGE.html" target="_blank">Home Page</a></li>
+                    <li><a href="avatar creator.html" target="_blank">Avatar Creator</a></li>
+                    <li><a href="events.html"target="_blank">Events</a></li>
+                    <li><a href="lore.html"target="_blank">Lore</a></li>
+                    <li><a href="games.html"target="_blank">Games</a></li>
+                    <li><a href="GACHA.html" target="_blank">GACHA</a></li>
+                    <li><a href="shop.html"target="_blank">Shop</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="left-box box">
+            <h2 style="font-family: 'Cinzel', sans-serif;">FREE</h2>
+            <img src="https://i.postimg.cc/x104pjyz/gacha.png" alt="Free Image" class="image-trigger" data-modal="free-modal">
+            <h1 style="font-family: 'Cinzel', sans-serif;">click me!</h1></div>
+           
+        
+        <div class="right-box box">
+            <h2 style="font-family: 'Cinzel', sans-serif;">PREMIUM</h2>
+            <img src="https://i.postimg.cc/vTY659MT/IMG-2702.png" alt="Free Image" class="image-trigger" data-modal="free-modal">
+            <div class="password-container">
+                <input type="password" id="premium-password-input" placeholder="Enter Key">
+                <button id="premium-submit-button">Submit</button>
+            </div>
+        </div>
+        
+    </main>
+    
+    <footer>
+        <!-- Footer content here -->
+    </footer>
+
+    <div class="modal-container" id="premium-modal" style="display: none;">
+        <div class="modal">
+            <span id="close-modal" class="close-button">×</span>
+            <h2 style="font-family: 'Cinzel', sans-serif;">NEW ITEM!</h2><h3>Right click to save!</h3>
+            <img id="random-image" alt="Premium Image">
+        </div>
+    </div><div class="modal-container" id="free-modal" style="display: none;">
+        <div class="modal">
+            <span id="close-modal" class="close-button">×</span>
+            <h2 style="font-family: 'Cinzel', sans-serif;">NEW ITEM!</h2><h3>Right click to save!</h3>
+            <img id="random-image" alt="Free Image">
+        </div>
+    </div>
+    <script>
+      const premiumPasswordInput = document.getElementById('premium-password-input');
+const premiumSubmitButton = document.getElementById('premium-submit-button');
+const premiumModal = document.getElementById('premium-modal');
+const closeModalButton = document.getElementById('close-modal');
+const randomImage = document.getElementById('random-image');
+const premiumPassword = '192021'; // Password required to access the premium image
+const imageUrls = [
+    { url: 'https://i.postimg.cc/TYswnpX6/avatar-image.png', probability: 40 }, // 40% chance
+    { url: 'https://i.postimg.cc/pXW8s975/Female-Base.png', probability: 30 }, // 30% chance
+    { url: 'https://i.postimg.cc/JhWQqk6k/Female-Onepiece-Demonic-Treasures-R1.png', probability: 20 }, // 20% chance
+    { url: 'https://i.postimg.cc/t4R5nvyf/composite-image-1.png', probability: 10 } // 10% chance
+];
+
+premiumSubmitButton.addEventListener('click', () => {
+    // Check if the password is correct
+    if (premiumPasswordInput.value === premiumPassword) {
+        // Generate a random number between 1 and 100
+        const randomChance = Math.floor(Math.random() * 100) + 1;
+        let cumulativeProbability = 0;
+
+        // Iterate through imageUrls to determine which image to show based on probability
+        for (const imageUrl of imageUrls) {
+            cumulativeProbability += imageUrl.probability;
+            if (randomChance <= cumulativeProbability) {
+                // Set the random image URL as the source
+                randomImage.src = imageUrl.url;
+                break;
+            }
+        }
+
+        // Show the premium image modal when the password is correct
+        premiumModal.style.display = 'block';
+    } else {
+        // Display an error message or take any other desired action for incorrect password
+        alert('Incorrect key. Please try again.');
+    }
+});
+// Close the modal when the close button is clicked
+closeModalButton.addEventListener('click', () => {
+    premiumModal.style.display = 'none';
+});
+
+   // Add an event listener to the free image
+   const freeImage = document.querySelector('.image-trigger[data-modal="free-modal"]');
+        freeImage.addEventListener('click', () => {
+            // Generate a random number between 1 and 100
+            const randomChance = Math.floor(Math.random() * 100) + 1;
+            let cumulativeProbability = 0;
+
+            // Define the image URLs and their probabilities
+            const freeImageUrls = [
+                { url: 'https://i.postimg.cc/NGHTpKby/Greyscale-Pumpkin-Bucket.png', probability: 1 }, // 3% chance
+                { url: 'https://i.postimg.cc/D0LXZNmQ/Midas-Pumpkin-Bucket.png', probability: 1 }, // 3% chance
+                { url: 'https://i.postimg.cc/HxJ5Gngh/Malachite-Pumpkin-Bucket.png', probability: 12 }, // 30% chance
+                { url: 'https://i.postimg.cc/9fgTNTv9/Iris-Pumpkin-Bucket.png', probability: 12 },  // 40% chance
+                { url: 'https://i.postimg.cc/FR2ShvFs/Tangerine-Pumpkin-Bucket.png', probability: 11 },  // 40% chance
+                { url: 'https://i.postimg.cc/Bn9GHVbL/Greyscale-Witch-Hat.png', probability: 1 },  // 3% chance
+                { url: 'https://i.postimg.cc/mgYWwy1d/Midas-Witch-Hat.png', probability: 1 }, // 3% chance
+                { url: 'https://i.postimg.cc/V66yzyGT/Amaranth-Withered-Witch-Hat.png', probability: 12 },  // 40% chance
+                { url: 'https://i.postimg.cc/R0G5rCRK/Obsidian-Iris-Witch-Hat.png', probability: 12 },  // 40% chance
+                { url: 'https://i.postimg.cc/TwHzwkBP/Obsidian-Obsidian-Witch-Hat.png', probability: 11 },  // 40% chance
+                { url: 'https://i.postimg.cc/vmGFSxWG/Gingerbread-Pumpkin-Witch-Hat.png', probability: 11 },  // 40% chance
+                { url: 'https://i.postimg.cc/QC9RWQrJ/Obsidian-Tangerine-Witch-Hat.png', probability: 11 },  // 40% chance
+];
+
+            // Iterate through freeImageUrls to determine which image to show based on probability
+            for (const imageUrl of freeImageUrls) {
+                cumulativeProbability += imageUrl.probability;
+                if (randomChance <= cumulativeProbability) {
+                    // Set the random image URL as the source
+                    randomImage.src = imageUrl.url;
+                    // Show the premium image modal
+                    premiumModal.style.display = 'block';
+                    break;       }
+            }
+        });
+    </script>
+</body>
+</html>
